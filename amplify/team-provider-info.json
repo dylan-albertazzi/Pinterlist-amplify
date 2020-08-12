@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-pinterlist-dev-91246-authRole",
+            "UnauthRoleArn": "arn:aws:iam::302080267522:role/amplify-pinterlist-dev-91246-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::302080267522:role/amplify-pinterlist-dev-91246-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-pinterlist-dev-91246-deployment",
+            "UnauthRoleName": "amplify-pinterlist-dev-91246-unauthRole",
+            "StackName": "amplify-pinterlist-dev-91246",
+            "StackId": "arn:aws:cloudformation:us-west-2:302080267522:stack/amplify-pinterlist-dev-91246/a9abf940-dcb6-11ea-bb17-0a8077ae26ee",
+            "AmplifyAppId": "d3qnanp7zrb91c"
+        }
+    }
+}

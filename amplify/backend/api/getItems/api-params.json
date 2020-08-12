@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "pinterlistItems",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "getItems",
+    "apiName": "getItems",
+    "functionArns": [
+        {
+            "lambdaFunction": "pinterlistItems"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-pinterlist-dev-91246-authRole",
+        "unAuthRoleName": "amplify-pinterlist-dev-91246-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "pinterlistItems",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
