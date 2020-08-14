@@ -9,6 +9,13 @@ import {
   ListGroupItem,
 } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { API } from "aws-amplify";
+
+const myInit = {
+  // OPTIONAL
+  headers: {}, // OPTIONAL
+  response: true, // OPTIONAL (return the entire Axios response object instead of only response.data)
+};
 
 export default function AddPin() {
   const [items, setItems] = useState([{ id: "", ingredientName: "" }]);
@@ -29,8 +36,17 @@ export default function AddPin() {
     //validate user input. Make sure it's from Pinterest.com
     if (fromPinterest(pinUrl)) {
       console.log("adding pin now");
+
+      myInit.pinUrl = pinUrl;
       //Add pin via addPin action
-      // addPinNoUser(pinURL); **call add pin action here
+      API.get("getItems", "/items")
+        .then((res) => {
+          console.log("getItems response: ", res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      // addPinNoUser(pinUrl); //call add pin action here
       //close modal
     } else {
       console.log("error, most likely a bad url.");
